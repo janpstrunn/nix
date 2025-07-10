@@ -7,6 +7,7 @@
     newsboat
     pandoc
     seahorse
+    zathura
     # zotero
   ];
 }
