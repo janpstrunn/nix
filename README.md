@@ -40,10 +40,7 @@ This approach allows me to have agnostic configs, which can be used in any syste
 
 This repository include an installation script which helps you install this NixOS configuration. The script will handle everything (disk format, installation, apply dotfiles config and setup user password).
 
-To use the script you must be aware of two things:
-
-- This repository uses `disko` to manage partitions. I do recommend you to use your own `disko` configuration, or check the available ones in this repository at `./profiles/disks/` before proceeding!
-- Home Manager is configured separately from NixOS. This means you must run `home-manager switch --flake .` to apply the Home Manager configuration after installation.
+> This repository uses `disko` to manage partitions. I do recommend you to use your own `disko` configuration, or check the available ones in this repository at `./profiles/disks/` before proceeding!
 
 You can try this configuration in two ways:
 
