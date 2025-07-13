@@ -17,7 +17,6 @@
     ./system/networking.nix
     ./system/nextdns.nix
     # ./system/opengl.nix
-    ./system/podman.nix
     ./system/security/automount.nix
     # ./system/security/doas.nix
     ./system/security/firewall.nix

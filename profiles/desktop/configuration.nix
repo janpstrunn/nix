@@ -4,6 +4,7 @@
     # ../../modules/system/bluetooth.nix
     # ../../modules/system/docker.nix
     # ../../modules/system/gamemode.nix
+    ../../modules/system/podman.nix
     # ../../modules/system/power.nix
     # ../../modules/system/printer.nix
     # ../../modules/system/proxy.nix
