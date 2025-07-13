@@ -8,7 +8,7 @@
     ../../modules/home.nix
     # Programming Languages
     ../../modules/user/lang/android.nix
-    ../../modules/user/lang/cpp.nix
+    ../../modules/user/lang/c.nix
     ../../modules/user/lang/go.nix
     ../../modules/user/lang/nodejs.nix
     ../../modules/user/lang/python.nix
