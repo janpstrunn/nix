@@ -2,20 +2,28 @@
   description = "NixOS";
 
   inputs = {
-    disko.inputs.nixpkgs.follows = "nixpkgs";
-    disko.url = "github:nix-community/disko";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    home-manager.url = "github:nix-community/home-manager/release-25.05";
+    disko = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/disko";
+    };
+    home-manager = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager/release-25.05";
+    };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest"; # Declare flatpaks
     # nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     nixpkgs.url = "nixpkgs/nixos-25.05";
+
+    # Scripts
+    leta-searcher.url = "github:janpstrunn/search-sh";
   };
 
   outputs = {
+    disko,
     home-manager,
     nix-flatpak,
     nixpkgs,
-    disko,
+    leta-searcher,
     # nixpkgs-unstable,
     ...
   }: let
@@ -69,6 +77,7 @@
             home-manager.extraSpecialArgs = {
               # inherit pkgs-unstable;
               inherit pkgs;
+              inherit leta-searcher;
               inherit system;
               inherit systemSettings;
               inherit userSettings;
