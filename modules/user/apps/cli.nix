@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     age
-    atomicparsley
+    # atomicparsley
     bash-completion
     bat
     bc
