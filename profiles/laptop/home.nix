@@ -16,9 +16,9 @@
     ../../modules/user/lang/rust.nix
     # Applications
     ../../modules/user/apps/cli.nix
-    # ../../modules/user/apps/editor/emacs.nix
-    ../../modules/user/apps/editor/nvim.nix
-    # ../../modules/user/apps/editor/obsidian.nix
+    # ../../modules/user/apps/emacs.nix
+    ../../modules/user/apps/nvim.nix
+    # ../../modules/user/apps/obsidian.nix
     ../../modules/user/apps/email.nix
     ../../modules/user/apps/password-manager.nix
     # ../../modules/user/apps/syncthing.nix
