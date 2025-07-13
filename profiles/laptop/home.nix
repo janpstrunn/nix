@@ -24,6 +24,8 @@
     # ../../modules/user/apps/syncthing.nix
     ../../modules/user/apps/task-management.nix
     # ../../modules/user/apps/virt-manager.nix
+    # Scripts
+    ../../modules/user/scripts/leta-searcher.nix
     # Window Manager
     # ../../modules/user/wm/hyprland.nix
   ];
