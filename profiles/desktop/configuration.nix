@@ -1,6 +1,15 @@
 {userSettings, ...}: {
   imports = [
     ../../modules/core.nix
+
+    # Window Managers
+    ../../modules/system/wm/dwm.nix
+    # ../../modules/system/wm/gnome.nix
+    # ../../modules/system/wm/hyprland.nix
+    # ../../modules/system/wm/i3.nix
+    # ../../modules/system/wm/plasma.nix
+    # ../../modules/system/wm/qtile.nix
+
     # ../../modules/system/bluetooth.nix
     # ../../modules/system/docker.nix
     # ../../modules/system/gamemode.nix
