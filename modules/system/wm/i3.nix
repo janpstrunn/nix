@@ -4,9 +4,12 @@
   callPackage,
   ...
 }: {
+  imports = [
+    ../display-server/x11.nix
+    ../display-server/display-manager.nix
+  ];
   environment.pathsToLink = ["/libexec"];
   services.xserver = {
-    enable = true;
     desktopManager = {
       xterm.enable = false;
     };
