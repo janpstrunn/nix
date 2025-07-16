@@ -2,9 +2,7 @@
   pkgs,
   userSettings,
   ...
-}: let
-  disableService = userSettings.profile != "laptop";
-in {
+}: {
   imports = [
     ../display-server/wayland.nix
     ../display-server/display-manager.nix
