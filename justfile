@@ -9,15 +9,15 @@ list:
 
 # Rebuild using Flakes
 f-switch:
-  sudo nixos-rebuild switch --flake .#janpstrunn
+  sudo nixos-rebuild switch --flake .#install
 
 # Update flake.lock
 f-update:
   nix flake update
 
-# Rebuild Home Manager Config (Deprecated)
+# Rebuild Home Manager Config
 hm-switch:
-  home-manager switch --flake .
+  home-manager switch --flake .#nixos
 
 # View Home Manager Generations
 hm-gen:
