@@ -59,7 +59,7 @@
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
-      janpstrunn = lib.nixosSystem {
+      default = lib.nixosSystem {
         system = "${system}";
         modules = [
           (./. + "/profiles/" + ("/" + userSettings.profile) + "/configuration.nix")
@@ -86,6 +86,40 @@
         ];
         specialArgs = {
           # inherit pkgs-unstable;
+          inherit system;
+          inherit systemSettings;
+          inherit userSettings;
+        };
+      };
+      nixos = lib.nixosSystem {
+        system = "${system}";
+        modules = [
+          (./. + "/profiles/" + ("/" + userSettings.profile) + "/configuration.nix")
+          nix-flatpak.nixosModules.nix-flatpak
+          disko.nixosModules.disko
+          ./profiles/disks/ext4-luks.nix
+          {
+            _module.args.disks = ["/dev/sda"];
+          }
+        ];
+        specialArgs = {
+          # inherit pkgs-unstable;
+          inherit system;
+          inherit systemSettings;
+          inherit userSettings;
+        };
+      };
+    };
+    homeConfigurations = {
+      nixos = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          (./. + "/profiles/" + ("/" + userSettings.profile) + "/home.nix")
+        ];
+        extraSpecialArgs = {
+          # inherit pkgs-unstable;
+          inherit pkgs;
+          inherit leta-searcher;
           inherit system;
           inherit systemSettings;
           inherit userSettings;
